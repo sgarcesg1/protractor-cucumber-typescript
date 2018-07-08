@@ -2,24 +2,24 @@ Feature: Add Doctor Feature
     Background:
         Given I am at the home page
         When I click on the "Add Doctor"
-        Then I should be directed to the " Add Doctor" page
+        Then I should be directed to the "Add Doctor" page
 
     @Laura
     Scenario Outline: Happy Path
-        Given I'm at the " Add Doctor Page"
-        # When I type <Name> on the "Name Field"
-        # And I type <Last_Name> on the " Last Name Field"
-        # And I type <Telephone> on the "Telephone Field"
-        # And I select <Identification_Type>
-        # And I type <Identification_Number> on the " Identification Field"
-        # And I click on "Save Button"
-        Then Confirmation Message "Datos guardados exitosamente" should be displayed
+        Given I'm at the "Add Doctor Page"
+        When I type "<Name>" on the "Name Field"
+        And I type "<Last_Name>" on the "Last Name Field"
+        And I type "<Telephone>" on the "Telephone Field"
+        And I select "<Identification_Type>" on the "Identification Type"
+        And I type "<Identification_Number>" on the "Identification Field"
+        And I click on "Save Button"
+        #       Then Confirmation Message "Datos guardados exitosamente" should be displayed
 
-# Examples:
-#     | Name  | Last_Name | Telephone | Identification_Type   | Identification_Number |
-#     | Tim   | OLeary    | 12345678  | Cedula de Ciudadania  | 0987654               |
-#     | Laura | Ochoa     | 2654886   | Cedula de Ciudadania  | 1152441101            |
-#     | Miley | Oleary    | 260302    | Cedula de Extrangeria | Doggo1212             |
+        Examples:
+            | Name  | Last_Name | Telephone | Identification_Type   | Identification_Number |
+            | Tim   | OLeary    | 12345678  | Cédula de ciudadanía  | 0987654               |
+            | Laura | Ochoa     | 2654886   | Cédula de ciudadanía  | 1152441101            |
+            | Miley | Oleary    | 260302    | Cédula de extrangería | Doggo1212             |
 
 # Scenario: Empty Fields
 #     Given I'm at the " Add Doctor Page"
