@@ -6,11 +6,11 @@ Feature: Login Falabella
   #c) limites (nombre muy largo, tipo de dato)
 
 
-
+#@laurap
   Scenario: Login Falabella successfully
     Given I go to the falabela page
     When I select the "inicia Sesion" with on click
-    And I click in the "No Gracias"
+    #And I click in the "No Gracias"
     When I select the "ingrasa tu email" with on click
     And I write in the ingresa tu email "laura.jazmin28@gmail.com" correo de inicio
     When I select the "ingrasa tu contraseña" with on click

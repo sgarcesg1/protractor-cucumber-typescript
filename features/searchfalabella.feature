@@ -5,7 +5,7 @@ Feature: search Falabella
   b) falle (campos requeridos)
   c) limites (nombre muy largo, tipo de dato)
 
-@laurap
+
   Scenario: search successfully
     Given I go to the falabela page
     When I click en buscar

@@ -1,4 +1,4 @@
-import { browser, protractor, By } from "protractor";
+/* import { browser, protractor, By } from "protractor";
 import { SearchPageObject } from "../pages/searchPage";
 import { SearchFPage } from "../pages/searchFPage";
 import { create } from "domain";
@@ -42,3 +42,4 @@ Then(/^show selected brand "(.*)"$/, async (expectedName) => {
   var actualName = await searchPage.selectedBrand.getText();
   expect(actualName.split("\n")[0]).to.be.equal(expectedName);
 });
+ */

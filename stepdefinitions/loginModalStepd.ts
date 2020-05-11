@@ -1,4 +1,4 @@
-/*import { browser, protractor, By } from "protractor";
+import { browser, protractor, By } from "protractor";
 import { SearchPageObject } from "../pages/searchPage";
 import { LoginModalPage } from "../pages/loginmodalPage";
 import { create } from "domain";
@@ -49,4 +49,4 @@ Then(/^show in the ingresa tu email Bienvenida "(.*)"$/, async (expectedName) =>
   var actualName = await loginmodalPage.startSection.getText();
   expect(actualName).to.be.equal(expectedName);
   
-});*/
+});
