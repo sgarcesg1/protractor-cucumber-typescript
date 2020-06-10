@@ -1,19 +1,20 @@
 import { $, $$, ElementFinder, ElementArrayFinder, element } from "protractor";
-//URL
-//Elementos de la pagina
+// URL
+// Elementos de la pagina
 
-//menu.findCategory("Tecnología").mouse.over
-//submenu.getSubCategory("Gaming").isDisplayed()
-//submenu.getMenuItem("Gaming", "Nintendo").isDisplayed()
+// menu.findCategory("Tecnología").mouse.over
+// submenu.getSubCategory("Gaming").isDisplayed()
+// submenu.getMenuItem("Gaming", "Nintendo").isDisplayed()
+
 export class SearchPageObject {
     static url = "https://www.falabella.com.co/falabella-co/";
-    
+
     public categoryButton: ElementFinder;
     public modalCloseButton: ElementFinder;
     public categories: ElementArrayFinder;
     public subcategories: ElementArrayFinder;
-    //Assertions
-           
+    // Assertions
+
     constructor() {
       this.categoryButton = $('#hamburgerMenu')
       this.modalCloseButton = $('#acc-alert-close')
@@ -24,9 +25,9 @@ export class SearchPageObject {
 
     async findCategory(categoryName) :Promise<ElementFinder> {
       let category = null;
-      //[16]
-      await this.categories.each(async element => {//tecnologia en el feature
-        let name = await element.getText()
+      // [16]
+      await this.categories.each(async element => {// tecnologia en el feature
+        const name = await element.getText()
         if (name === categoryName) {
           category = element;
         }
@@ -36,9 +37,9 @@ export class SearchPageObject {
 
     async findSubCategory(subCategoryName) :Promise<ElementFinder> {
       let subcategory = null;
-      //[8]
+      // [8]
       await this.subcategories.each(async element => {
-        let name = await element.getText()
+        const name = await element.getText()
         if (name === subCategoryName) {
           subcategory = element;
         }
@@ -51,13 +52,13 @@ export class SearchPageObject {
     }
 }
 
-//category $$('.Menu-module_firstCategories__1v_O9') just 1
+// c ategory $$('.Menu-module_firstCategories__1v_O9') just 1
 
 
-//subacategory 
-//$$('.SecondLevelItems_detailsElements__36uYN') this have 112 elements
-//$$('.SecondLevelItems_displaySubMenuDesktop__33Gpt .SecondLevelItems_detailsElements__36uYN') this have 8 elements 
+// subacategory
+// $$('.SecondLevelItems_detailsElements__36uYN') this have 112 elements
+// $$('.SecondLevelItems_displaySubMenuDesktop__33Gpt .SecondLevelItems_detailsElements__36uYN') this have 8 elements 
 
 
 // title $$('.SecondLevelItems_submenuTitle__3U6Ct') have 112 elemente
-//$$('.SecondLevelItems_detailsElements__36uYN .SecondLevelItems_submenuTitle__3U6Ct') just 112
+// $$('.SecondLevelItems_detailsElements__36uYN .SecondLevelItems_submenuTitle__3U6Ct') just 112

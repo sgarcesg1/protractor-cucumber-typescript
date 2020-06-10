@@ -1,6 +1,6 @@
 import { $, ElementFinder } from "protractor";
 import { async } from "q";
-//import {  MultiSelect } from "../pages/multiSelect";
+// import {  MultiSelect } from "../pages/multiSelect";
 
 
 export class LoginModalPage {

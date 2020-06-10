@@ -8,7 +8,7 @@ Feature: Search categories
         And the user click on item "Samsung Watch" inside "Smartwatch"
         And the user wait
 
-    @laurap
+    #@laurap
     Scenario: Search categories
         Given the user is on the Falabella page
         When the user click on button categorias

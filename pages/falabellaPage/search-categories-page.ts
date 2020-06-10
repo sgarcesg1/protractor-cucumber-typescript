@@ -1,4 +1,4 @@
-import { Menu } from './components/menu';
+import { Menu } from '../components/menu';
 import { $, $$, ElementFinder, ElementArrayFinder, element } from "protractor";
 
 // Elementos de la pagina

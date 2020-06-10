@@ -1,11 +1,11 @@
 import { browser, ElementFinder } from "protractor";
-import {SearchPageObject } from "../pages/search-categories-page";
+import {SearchPageObject } from "../../pages/falabellaPage/search-categories-page";
 import { Then } from "cucumber";
 const { Given, When, setDefaultTimeout } = require("cucumber");
 import * as chai from 'chai'
-import { Menu } from "../pages/components/menu";
-import { Category } from "../pages/components/category";
-import { SubCategory } from "../pages/components/subcategory";
+import { Menu } from "../../pages/components/menu";
+import { Category } from "../../pages/components/category";
+import { SubCategory } from "../../pages/components/subcategory";
 chai.use(require("chai-as-promised"))
 const expect = chai.expect;
 setDefaultTimeout(10000);

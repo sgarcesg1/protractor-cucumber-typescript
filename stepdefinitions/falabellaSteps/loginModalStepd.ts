@@ -1,6 +1,6 @@
-import { browser, protractor, By } from "protractor";
-import { SearchPageObject } from "../pages/searchPage";
-import { LoginModalPage } from "../pages/loginmodalPage";
+/* import { browser, protractor, By } from "protractor";
+import { SearchPageObject } from "../../pages/searchPage";
+import { LoginModalPage } from "../../pages/falabellaPage/loginmodalPage";
 import { create } from "domain";
 const { Given, When, Then } = require("cucumber");
 var expect = require('chai').expect;
@@ -18,7 +18,7 @@ When(/^I select the "inicia Sesion" with on click$/, async () => {
 
 When(/^I click in the "No Gracias"$/, async () => {
   await browser.sleep(3000);
-  await loginmodalPage.popUp.click();  
+  await loginmodalPage.popUp.click();
 });
 
 When(/^I select the "ingrasa tu email" with on click$/, async () => {
@@ -31,7 +31,7 @@ When(/^I write in the ingresa tu email "(.*)" correo de inicio$/, async (des) =>
 
 When(/^I select the "ingrasa tu contraseña" with on click$/, async () => {
   await loginmodalPage.passwordField.click();
-  
+
 });
 
 When(/^I write in the constraseña "(.*)"$/, async (des) => {
@@ -48,5 +48,5 @@ Then(/^show in the ingresa tu email Bienvenida "(.*)"$/, async (expectedName) =>
   await browser.sleep(3000);
   var actualName = await loginmodalPage.startSection.getText();
   expect(actualName).to.be.equal(expectedName);
-  
-});
+
+}); */
