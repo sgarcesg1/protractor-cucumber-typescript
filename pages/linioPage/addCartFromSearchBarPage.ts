@@ -13,6 +13,8 @@ export class AddCartFromSearchBarPage {
     public addButton : ElementFinder;
     public goTocart : ElementFinder;
     public titleCar : ElementFinder;
+    public summaryTitle : ElementFinder;
+    public productName : ElementFinder;
 
 
     constructor() {
@@ -21,8 +23,10 @@ export class AddCartFromSearchBarPage {
         this.menulinio = new MenuLinio();
         this.producLinio = new ProductsLinio();
         this.addButton = $(".col-xs-9 #buy-now");
-        // this.goTocart = $(".btn.btn-sm.btn-go-to-cart.added-product");
-        // this.titleCar = $(".title-section.row");
+        this.goTocart = $(".btn.btn-sm.btn-go-to-cart.added-product");
+        this.titleCar = $(".title-section.row");
+        this.summaryTitle = $(".title-summary");
+        this.productName = $(".item-title.col-xs-12");
 
     }
 }
