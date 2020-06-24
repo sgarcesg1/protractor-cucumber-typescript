@@ -24,7 +24,7 @@ When(/^I write in the searchbar "(.*)"$/, async (des) => {
 });
 
 When(/^I click in the option "(.*)"$/, async (des) => {
-  await browser.sleep(4000);
+  await browser.sleep(3000);
   option = await addCartFromSearchBarPage.menulinio.selectDesiredProduct(des);
   await option.click();
 });
@@ -36,7 +36,7 @@ When(/^I click in the product "(.*)"$/, async (des) => {
 });
 
 When(/^I click in the add button "Añadir a Carrito"$/, async () => {
-  await browser.sleep(5000);
+  await browser.sleep(3000);
   await addCartFromSearchBarPage.addButton.click();
 });
 
@@ -49,7 +49,7 @@ Then(/^show title "(.*)"$/, async (expectedName) => {
   /*const until = protractor.ExpectedConditions;
   const element = addCartFromSearchBarPage.titleCar
   browser.wait(until.presenceOf(element), 5000, 'Element no exist');*/
-  await browser.sleep(5000);
+  await browser.sleep(3000);
   const actualName = await addCartFromSearchBarPage.titleCar.getText();
   expect(actualName).to.be.equal(expectedName);
 });
@@ -61,5 +61,20 @@ Then(/^show title summary "(.*)"$/, async (expectedName) => {
 
 Then(/^show  product "(.*)"$/, async (expectedName) => {
   const actualName = await addCartFromSearchBarPage.productName.getText();
-  expect(actualName.includes(expectedName))// .to.be.equal(expectedName);
+  expect(actualName.includes(expectedName))
+});
+
+// Add a Cart from search bar WRONG WRITTEN WORD
+
+When(/^I click in the serchicon$/, async () => {
+  await addCartFromSearchBarPage.searchIcon.click();
+});
+
+Then(/^show title Nuestro gurú de compras no encontró resultados para: "(.*)"$/, async (expectedName) => {
+  const actualName = await addCartFromSearchBarPage.mistakeWord.getText();
+  expect(actualName).includes(expectedName);
+});
+Then(/^show message "(.*)"$/, async (expectedName) => {
+  const actualName = await addCartFromSearchBarPage.mistakemessage.getText();
+  expect(actualName).to.be.equal(expectedName);
 });

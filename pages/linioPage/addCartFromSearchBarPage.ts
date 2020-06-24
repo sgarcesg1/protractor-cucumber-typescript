@@ -15,6 +15,9 @@ export class AddCartFromSearchBarPage {
     public titleCar : ElementFinder;
     public summaryTitle : ElementFinder;
     public productName : ElementFinder;
+    public searchIcon : ElementFinder;
+    public mistakeWord : ElementFinder;
+    public mistakemessage :ElementFinder;
 
 
     constructor() {
@@ -27,6 +30,9 @@ export class AddCartFromSearchBarPage {
         this.titleCar = $(".title-section.row");
         this.summaryTitle = $(".title-summary");
         this.productName = $(".item-title.col-xs-12");
+        this.searchIcon = $(".btn.btn-primary.btn-search");
+        this.mistakeWord = $(".search-term");
+        this.mistakemessage = $(".text-content.secondary-text");
 
     }
 }
