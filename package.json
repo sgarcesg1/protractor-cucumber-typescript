@@ -48,6 +48,7 @@
   "repository": "https://github.com/igniteram/protractor-cucumber-typescript",
   "dependencies": {
     "@types/jquery": "^3.3.38",
+    "camelcase": "^6.0.0",
     "tslint": "^6.1.2"
   }
 }

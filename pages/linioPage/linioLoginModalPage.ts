@@ -1,10 +1,11 @@
 import { $, ElementFinder } from "protractor";
 import { async } from "q";
 // import {  MultiSelect } from "../pages/multiSelect";
+const camelcase  = require("camelcase");
 
 
 export class LinioLoginModalPage {
-    static URL = "https://www.linio.com.co/";
+    public URL = "https://www.linio.com.co/";
 
     public perfilIcon : ElementFinder;
     public signingSesion: ElementFinder;
@@ -24,13 +25,13 @@ export class LinioLoginModalPage {
     constructor() {
 
         this.perfilIcon = $("[href='/account']");
-        this.signingSesion = $("[href='/account/login']");
+        this.signingSesion = $("#user-menu [href='/account/login']");
         this.emailField =  $(".col-sm-6 > #login_form_email");
         this.passwordField = $("#login_form_password");
         this.loginButton = $("#login-form .btn.btn-security.col-xs-12");
         this.startSection = $(".user-welcome.body-base-sm");
 
-        this.signingSesionTwo = $("[href='/account/login']");
+       // this.signingSesionTwo = $("[href='/account/login']");
         this.forgotPasswors = $(".link-low-sm")
         this.emailForgot = $ ("#forgot_password_form_email")
         // this.recapcha = $(".recaptcha-checkbox-border")
@@ -42,7 +43,16 @@ export class LinioLoginModalPage {
 
 
     }
+
+    getField(name : string): ElementFinder {
+        const field = this[camelcase(name)];
+        if (!field) {
+            throw "Field not found for name:" + name;
+        }
+        return this[camelcase(name)];
+    }
 }
+
 
 
 
